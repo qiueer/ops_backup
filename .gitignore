@@ -1,0 +1,4 @@
+*.pyc
+backup_v1.0.py
+logs/
+log/
