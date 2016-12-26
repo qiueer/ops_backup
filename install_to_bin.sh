@@ -2,7 +2,7 @@
 
 CWD=$(pwd)
 SCRIPT_NAME="backup.py"
-CMDNAME="backup"
+CMDNAME="ops_backup"
 
 chmod a+x "${CWD}/${SCRIPT_NAME}"
 mkdir -p ${HOME}/bin/
