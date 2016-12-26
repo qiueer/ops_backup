@@ -116,4 +116,3 @@ class scolor(object):
 if __name__ == "__main__":
         scolor().error("what")
         scolor().info("what")
-        
