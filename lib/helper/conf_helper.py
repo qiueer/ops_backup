@@ -124,7 +124,9 @@ class conf_helper(ConfigParser.SafeConfigParser):
 
     def add(self):
         try:
-            section = raw_input(u"SECTION名(英文唯一标识): ")
+            while True:
+                section = raw_input(u"SECTION名(英文唯一标识): ")
+                if section and str(section).strip() != "": break
             
             if self.has_section(section) == True:
                 scolor.error("SECTION名已存在: %s"%(section))
