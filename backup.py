@@ -194,9 +194,9 @@ def backup_all(conffile, debug=False):
         backup_one(conffile, sc, debug=debug)
         
 def is_dir_exist(dirpath):
-    if os.path.exists(dirpath) == False:
-        return False,"目录%s不存在" %(dirpath)
-    return True,""
+    if dirpath and os.path.exists(dirpath):
+        return True,""
+    return False,"目录%s不存在" %(dirpath)
 
 def is_range_ok(rangestr):
     if str(rangestr).strip() not in ["include", "exclude"]:
