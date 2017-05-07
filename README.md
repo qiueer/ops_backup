@@ -45,3 +45,23 @@ Options:
   -l, --list            list all the configure  
   -d, --debug           if open debug module  
 ```
+
+## 用法示例
+```
+$ python backup.py -i linux  
+[FILE-1]  
+  FROM: /home/superman/cmdb  
+    TO: /tmp/albert/20170507172644185  
+  KEEP: 10  
+   ZIP: 1  
+=> backup result: SUCCESS  
+=> tar result: SUCCESS  
+[FILE-2]  
+  FROM: /home/superman/ops_backup  
+    TO: /tmp/superman/20170507172644185  
+  KEEP: 10  
+   ZIP: 1  
+=> backup result: SUCCESS  
+=> tar result: SUCCESS  
+=> Delete: /tmp/superman/20170507160105311  
+```

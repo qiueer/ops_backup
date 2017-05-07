@@ -348,7 +348,7 @@ def main():
         parser = OptionParser()
         parser.add_option("-i", "--id",  
                   action="store", dest="id", default=None,  
-                  help="which id to backup, if none, backup all", metavar="ID")
+                  help="which id to backup", metavar="ID")
         parser.add_option("-c", "--conf",  
                   action="store", dest="conf", default=None,  
                   help="configure file", metavar="CONFFILE")
@@ -392,7 +392,6 @@ def main():
         parser.print_help()
         
     except Exception, expt:
-        print "@@@@@@@"
         tb = traceback.format_exc()
         print tb
         parser.print_help()
