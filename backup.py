@@ -285,7 +285,6 @@ class Backup(object):
                 os.makedirs(destdir)
                 os.makedirs(auto_destdir)
 
-<<<<<<< HEAD
             for (idx,f) in enumerate(file_ln):
                 f = unicode(f.strip(), "utf-8")
                 if not f:continue
@@ -315,18 +314,6 @@ class Backup(object):
                     "retcode": retcode,
                 }
                 self._logger.dictlog(level="info", **logdict)
-=======
-def backup_all(conffile, debug=False):
-    bc = conf_helper(conffile)
-    sections = bc.sections()
-    for sc in sections:
-        backup_one(conffile, sc, debug=debug)
-        
-def is_dir_exist(dirpath):
-    if dirpath and os.path.exists(dirpath):
-        return True,""
-    return False,"目录%s不存在" %(dirpath)
->>>>>>> 337173a8ad2e6291f4e1626b1c14045a0a4f6d5c
 
                 if retcode == 0:
                     print(u"=> backup result: SUCCESS" )
