@@ -21,10 +21,12 @@ class sstr(object):
         for u in utext:
             if self._is_chinese(u):
                 cn_count += 1
+        resstr = u""
         if direction == "r":
-            return fill * (width - cn_count - len(utext)) + stext
+            resstr = fill * (width - cn_count - len(utext)) + stext
         if direction == "l":
-            return stext+fill * (width - cn_count - len(utext))
+            resstr = stext+fill * (width - cn_count - len(utext))
+        return u"{0}".format(resstr)
     
     def str_lpad(self, text,width=12, fill=" "):
         return self._str_pad(text, width=width, fill=fill, direction="l")

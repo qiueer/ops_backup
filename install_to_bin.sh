@@ -18,7 +18,11 @@ profile="$HOME/.bash_profile"
 if [ ! -f ${profile} ];then
 	profile="$HOME/.profile"
 fi
+if [ ! -f ${profile} ];then
+	profile="$HOME/.bashrc"
+fi
 
+echo $profile
 echo "$PATH" | grep "${HOME}/bin" > /dev/null 2>&1
 if [ $? -ne 0 ];then
 	cat $profile | grep "${HOME}/bin" > /dev/null 2>&1

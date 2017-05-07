@@ -24,7 +24,7 @@ class cmds(object):
             else:
                     self.ps = Popen(command, stdout=stdout, stdin=PIPE, stderr=stdout, shell=False)
             
-            if timeout:
+            if timeout and timeout > 0:
                 start = datetime.datetime.now()
                 while self.ps.poll() is None:
                         time.sleep(0.2)
