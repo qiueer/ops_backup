@@ -15,17 +15,18 @@
 ## 配置说明
 ```
 [linux]      ## 每个备份任务的唯一ID  
-srcfiles = /home/albert/svn_projects/fdd_cmdb;/home/albert/svn_projects/pa/opsutils/ops_backup    ## 备份目录(文件)  
-destdir = /tmp/albert   ## 备份目录(文件)存放目录  
-func = 备份CMDB  ## 功能说明  
+srcfiles = /home/superman/cmdb;/home/superman/ops_backup ## 备份目录(文件)  
+destdir = /tmp/superman  ## 备份目录(文件)存放目录  
+func = 备份CMDB以及本py脚本所在目录 ## 功能说明  
 excludes = .svn-base;.svn  ## 需要排除的目录(文件)  
 zip = 1  ## 是否压缩：1压缩，0不压缩
 keep = 10  ## 保留份数  
 timeout = 600 ## 执行备份任务预估所需时间，超过此时间会终止任务，不配置则会一直执行备份直至完成  
   
 [windows]  ## 同上  
+func = 备份PYTHON资源 ## 同上  
 srcfiles = E:\python资源    ## 同上  
-destdir = d:\albert_temp  ## 同上    
+destdir = d:\superman  ## 同上    
 excludes = .svn-base;.svn  ## 同上    
 zip = 1  ## 同上    
 keep = 10  ## 同上    
@@ -44,4 +45,3 @@ Options:
   -l, --list            list all the configure  
   -d, --debug           if open debug module  
 ```
-
